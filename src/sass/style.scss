@@ -1,0 +1,53 @@
+// single line quote
+/*
+	multi
+	line 
+	quote
+*/
+
+// 1. imports
+@import 'lib/reset';
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/functions';
+
+body { // single line quotes can go after code you want to use
+
+	background-color: $bodyBackground;
+	// 2. variables
+	
+	// 4. mixins
+	@include font-size(24);
+
+	// 5. functions
+	// margin: squared(12) + px;
+
+}
+
+.wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 18px;
+}
+
+.heading {
+	font-size: 12px;	
+	// 3: nesting;
+	&-text {
+		font-size: 24px;
+		&--pop {
+			font-size: 36px;
+		}
+	}
+}
+// 6. extends
+p {
+	margin-left: 20px
+}
+blockquote {
+	padding: 10px 0;
+	@extend p;
+}
